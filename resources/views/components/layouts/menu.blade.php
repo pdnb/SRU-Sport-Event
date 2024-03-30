@@ -14,13 +14,10 @@
         <x-menu-separator />
 
         <x-menu-item title="หน้าหลัก" icon="o-home" link="/" />
-{{--        <x-menu-sub title="Settings" icon="o-cog-6-tooth">--}}
-{{--            <x-menu-item title="Wifi" icon="o-wifi" link="####" />--}}
-{{--            <x-menu-item title="Archives" icon="o-archive-box" link="####" />--}}
-{{--        </x-menu-sub>--}}
+        <x-menu-item title="สมัครเข้าร่วมแข่งขัน" icon="o-user-plus" link="/register" />
     @else
         <x-menu-separator />
-        <x-button no-wire-navigate class="btn-primary" link="/auth/login" icon="o-arrow-right-end-on-rectangle">เข้าสู่ระบบ</x-button>
+        <x-button no-wire-navigate class="btn-primary" link="/auth/login" icon="o-arrow-right-end-on-rectangle">เข้าสู่ระบบด้วย Google</x-button>
         <x-menu-separator />
     @endif
 

@@ -28,7 +28,7 @@ class AuthController extends Controller
     {
         if(App::environment('local'))
         {
-            Auth::login(User::find('9b9fc33f-1b6c-4b0f-86b7-ead65e5c338f'));
+            Auth::login(User::find('9badd341-b5d2-4c47-9d56-68baf4a21ac4'));
 
             return redirect('/');
         }

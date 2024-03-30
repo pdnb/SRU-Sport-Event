@@ -5,10 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Registration extends Model
 {
-    use HasFactory, HasUuids;
+    use HasFactory, HasUuids, SoftDeletes;
 
     protected $guarded = [];
 
@@ -16,13 +17,23 @@ class Registration extends Model
         'properties' => 'json'
     ];
 
+    public function getFullnameAttribute()
+    {
+        return "{$this->prefix}{$this->first_name} {$this->last_name}";
+    }
+
     public function university()
     {
         return $this->belongsTo(University::class);
     }
 
-    public function roles()
+    public function sports()
     {
-        return $this->hasMany(Role::class);
+        return $this->belongsToMany(Sport::class, 'registration_sports');
+    }
+
+    public function positions()
+    {
+        return $this->belongsToMany(Position::class, 'registration_positions');
     }
 }

@@ -17,11 +17,13 @@ return new class extends Migration
             $table->string('prefix')->nullable();
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
+            $table->integer('age')->nullable();
             $table->json('properties')->nullable();
             $table->string('photo')->nullable();
             $table->string('id_card')->nullable();
             $table->string('staff_card')->nullable();
             $table->string('status')->default('pending')->nullable();
+            $table->uuid('created_by')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
