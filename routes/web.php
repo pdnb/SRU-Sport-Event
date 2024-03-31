@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Livewire\Pages\HomePage;
 use App\Livewire\Pages\RegisterPage;
+use App\Livewire\Pages\RegistrationPage;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,4 +24,5 @@ Route::get('/auth/logout', [AuthController::class, 'logout'])->name('auth.logout
 Route::get('/auth/callback', [AuthController::class, 'callback'])->name('auth.callback');
 Route::get('/auth/denied', [AuthController::class, 'denied'])->name('auth.denied');
 
+Route::get('/registrations/{university_id}', RegistrationPage::class)->name('registrations');
 Route::get('/register', RegisterPage::class)->middleware('auth')->name('register');

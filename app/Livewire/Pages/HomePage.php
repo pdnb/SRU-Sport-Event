@@ -18,6 +18,7 @@ class HomePage extends Component
     protected function universities()
     {
         return University::query()
+            ->withCount('registrations')
             ->orderBy('name')
             ->get();
     }

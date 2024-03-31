@@ -19,6 +19,8 @@
         <x-menu-separator />
         <x-button no-wire-navigate class="btn-primary" link="/auth/login" icon="o-arrow-right-end-on-rectangle">เข้าสู่ระบบด้วย Google</x-button>
         <x-menu-separator />
+
+        <x-menu-item title="หน้าหลัก" icon="o-home" link="/" />
     @endif
 
 </x-menu>
