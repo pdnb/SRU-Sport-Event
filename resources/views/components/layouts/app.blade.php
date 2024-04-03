@@ -12,7 +12,7 @@
 {{-- NAVBAR mobile only --}}
 <x-nav sticky class="lg:hidden">
     <x-slot:brand>
-        <div>{{ env('APP_NAME') }}</div>
+        <div>ราชพฤกษ์เกมส์</div>
     </x-slot:brand>
     <x-slot:actions>
         <label for="main-drawer" class="lg:hidden mr-3">
@@ -27,7 +27,7 @@
     <x-slot:sidebar drawer="main-drawer" class="bg-base-100 lg:bg-inherit">
 
         {{-- BRAND --}}
-        <div class="pl-5 pt-5">{{ env('APP_NAME') }}</div>
+        <div class="pl-5 pt-5">ราชพฤกษ์เกมส์</div>
 
         @include('components.layouts.menu')
     </x-slot:sidebar>

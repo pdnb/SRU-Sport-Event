@@ -1,5 +1,5 @@
 <div>
-    <x-header>
+    <x-header class="mb-6">
         <x-slot:middle class="!justify-end">
             <x-input icon="o-magnifying-glass" wire:model.live.debounce.500ms="search" autocomplete="off" clearable />
         </x-slot:middle>
@@ -7,6 +7,7 @@
             <x-button icon="o-user-plus" class="btn-primary" label="สมัครเข้าร่วมแข่งขัน" :link="route('register')" />
         </x-slot:actions>
     </x-header>
+    <x-alert title="คำชี้แจง" description="หากท่านต้องการแก้ไขข้อมูลที่บันทึกไปแล้ว ให้ท่านลบข้อมูลเก่าและเพิ่มข้อมูลใหม่ที่ถูกต้อง" icon="o-exclamation-circle" class="alert-info" />
     @forelse($registrations as $registration)
         <x-list-item :item="$registration">
             <x-slot:avatar>

@@ -60,9 +60,16 @@ class HomePage extends Component
 
     public function delete($id)
     {
-        Registration::query()
-            ->findOrFail($id)
-            ->delete();
+        $registration = Registration::query()
+            ->findOrFail($id);
+
+        if($registration->status === 'approved')
+        {
+            $this->error('ไม่สามารถลบข้อมูลได้', 'เนื่องจากการสมัครแข่งขันได้รับการอนุมัติแล้ว', timeout: 5000);
+            return;
+        }
+
+        $registration->delete();
 
         $this->success('ลบข้อมูลผู้สมัครสำเร็จ');
     }
