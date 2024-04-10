@@ -3,6 +3,7 @@
 namespace App\Livewire\Pages;
 
 use App\Models\University;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
 class RegistrationPage extends Component
@@ -25,6 +26,6 @@ class RegistrationPage extends Component
     {
         return view('livewire.pages.registration', [
             'registrations' => $this->registrations()
-        ]);
+        ])->title('รายชื่อผู้สมัครแข่งขัน ' . $this->university->name);
     }
 }

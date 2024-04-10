@@ -23,4 +23,14 @@
         <x-menu-item title="หน้าหลัก" icon="o-home" link="/" />
     @endif
 
+    <x-menu-sub title="โปรแกรมการแข่งขัน" icon="o-calendar-days">
+        <x-menu-item title="แชร์บอล" icon="o-clock" link="/schedule/1S59fYgnmbV4DL1H2QxTpPmITCqMtMnLX" />
+        <x-menu-item title="ตะกร้อ" icon="o-clock" link="/schedule/1WWp_elbtZYUB4VkegDUkwgz6AKYSjbyc" />
+        <x-menu-item title="บาสเกตบอล" icon="o-clock" link="/schedule/1I_MTdtRCcxQQZ79rJ7rISof2jreWMWeK" />
+        <x-menu-item title="เปตอง" icon="o-clock" link="/schedule/1C1M0CUhd9YJhlrcqcab03u-gtU0Q4pn7" />
+        <x-menu-item title="ฟุตซอล" icon="o-clock" link="/schedule/1T_yIGOW4KzM4qKxNdpstg2xd_jaw2lrn" />
+        <x-menu-item title="ฟุตบอล" icon="o-clock" link="/schedule/1euagOosUhJuLnurzHX4hSUyE1iN6z9TQ" />
+        <x-menu-item title="วอลเลย์บอล" icon="o-clock" link="/schedule/1gNiQroHDqhTa31KXJY4YybPPmjRcJyxY" />
+    </x-menu-sub>
+    <x-menu-item title="ผลการแข่งขัน" icon="o-trophy" link="/score" />
 </x-menu>

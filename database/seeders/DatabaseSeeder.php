@@ -29,6 +29,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@admin.com',
             'email_verified_at' => now(),
             'password' => Hash::make('adminadmin'),
+            'is_admin' => 1
         ]);
 
         University::query()->insert([

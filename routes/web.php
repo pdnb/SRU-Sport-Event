@@ -4,6 +4,8 @@ use App\Http\Controllers\AuthController;
 use App\Livewire\Pages\HomePage;
 use App\Livewire\Pages\RegisterPage;
 use App\Livewire\Pages\RegistrationPage;
+use App\Livewire\Pages\SchedulePage;
+use App\Livewire\Pages\ScorePage;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +28,5 @@ Route::get('/auth/denied', [AuthController::class, 'denied'])->name('auth.denied
 
 Route::get('/registrations/{university_id}', RegistrationPage::class)->name('registrations');
 Route::get('/register', RegisterPage::class)->middleware('auth')->name('register');
+Route::get('/schedule/{id}', SchedulePage::class)->name('schedule');
+Route::get('/score', ScorePage::class)->name('score');

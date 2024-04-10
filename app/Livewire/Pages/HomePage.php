@@ -8,6 +8,7 @@ use App\Models\University;
 use Illuminate\Database\Eloquent\Builder;
 use Livewire\Component;
 use Mary\Traits\Toast;
+use Livewire\Attributes\Title;
 
 class HomePage extends Component
 {
@@ -46,6 +47,7 @@ class HomePage extends Component
             ->get();
     }
 
+    #[Title('หน้าหลัก')]
     public function render()
     {
         if(auth()->guest())

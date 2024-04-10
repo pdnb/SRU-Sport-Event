@@ -5,7 +5,7 @@
             <li>{{ $university->name }}</li>
         </ul>
     </div>
-    @foreach($registrations as $registration)
+    @forelse($registrations as $registration)
         <x-list-item :item="$registration" value="fullname">
             <x-slot:avatar>
                 <x-icon name="o-user" />
@@ -16,5 +16,11 @@
                 </small>
             </x-slot:sub-value>
         </x-list-item>
-    @endforeach
+    @empty
+        <div class="text-center mt-4">
+            <x-icon name="o-x-circle" class="w-8 h-8 text-error" />
+            <br />
+            <span class="text-gray-400 mt-1">ไม่พบข้อมูล</span>
+        </div>
+    @endforelse
 </div>

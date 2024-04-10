@@ -5,6 +5,7 @@ namespace App\Livewire\Pages;
 use App\Livewire\Forms\RegisterForm;
 use App\Models\Position;
 use App\Models\Sport;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\On;
@@ -31,6 +32,7 @@ class RegisterPage extends Component
             ->get();
     }
 
+    #[Title('สมัครเข้าร่วมแข่งขัน')]
     public function render()
     {
         return view('livewire.pages.register', [

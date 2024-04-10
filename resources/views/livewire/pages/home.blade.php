@@ -7,7 +7,13 @@
             <x-button icon="o-user-plus" class="btn-primary" label="สมัครเข้าร่วมแข่งขัน" :link="route('register')" />
         </x-slot:actions>
     </x-header>
-    <x-alert title="คำชี้แจง" description="หากท่านต้องการแก้ไขข้อมูลที่บันทึกไปแล้ว ให้ท่านลบข้อมูลเก่าและเพิ่มข้อมูลใหม่ที่ถูกต้อง" icon="o-exclamation-circle" class="alert-info" />
+    <x-alert title="คำชี้แจง" icon="o-exclamation-circle" class="alert-warning">
+        <x-slot:description>
+            <div class="text-sm">
+                หากท่านต้องการแก้ไขข้อมูลที่บันทึกไปแล้ว ให้ท่านลบข้อมูลเก่าและเพิ่มข้อมูลใหม่ที่ถูกต้อง
+            </div>
+        </x-slot:description>
+    </x-alert>
     @forelse($registrations as $registration)
         <x-list-item :item="$registration">
             <x-slot:avatar>
@@ -38,7 +44,7 @@
             </x-slot:actions>
         </x-list-item>
     @empty
-        <div class="text-center">
+        <div class="text-center mt-4">
             <x-icon name="o-x-circle" class="w-8 h-8 text-error" />
             <br />
             <span class="text-gray-400 mt-1">ไม่พบข้อมูล</span>

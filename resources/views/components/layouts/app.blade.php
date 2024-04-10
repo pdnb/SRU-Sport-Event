@@ -12,7 +12,9 @@
 {{-- NAVBAR mobile only --}}
 <x-nav sticky class="lg:hidden">
     <x-slot:brand>
-        <div>ราชพฤกษ์เกมส์</div>
+        <div class="pl-3">
+            <img src="{{ asset('assets/logo.png') }}" class="w-8" />
+        </div>
     </x-slot:brand>
     <x-slot:actions>
         <label for="main-drawer" class="lg:hidden mr-3">
@@ -27,14 +29,16 @@
     <x-slot:sidebar drawer="main-drawer" class="bg-base-100 lg:bg-inherit">
 
         {{-- BRAND --}}
-        <div class="pl-5 pt-5">ราชพฤกษ์เกมส์</div>
+        <div class="pl-5 pt-5 flex justify-center">
+            <img src="{{ asset('assets/logo.png') }}" class="w-20" />
+        </div>
 
         @include('components.layouts.menu')
     </x-slot:sidebar>
 
     {{-- The `$slot` goes here --}}
     <x-slot:content>
-        <x-card title="ราชพฤกษ์เกมส์" subtitle="การแข่งขันกีฬาบุคลากร ม.ราชภัฏเขตภาคใต้ ครั้งที่ 6" separator>
+        <x-card title="ราชพฤกษ์เกมส์" subtitle="กีฬาบุคลากรมหาวิทยาลัยราชภัฏเขตภาคใต้ ครั้งที่ 6" separator>
             {{ $slot }}
         </x-card>
     </x-slot:content>
